@@ -28,15 +28,12 @@ function toTop() {
   document.documentElement.scrollTop = 0;
 }
 
-////contact////
+////contactMe////
+//reset button
 function reset(){
 document.getElementById("form").reset();
 }
-
-
-function redirect(){
-  document.location.href="/";
-}
+/////
 
 
 

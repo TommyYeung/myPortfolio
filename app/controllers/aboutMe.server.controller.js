@@ -7,8 +7,8 @@
    */
 
 exports.render = function(req, res) {
-    // res.send('Hello World');
- 
+
+ //request
  //session
     if (req.session.lastVisit) {
      console.log(req.session.lastVisit);
@@ -16,7 +16,7 @@ exports.render = function(req, res) {
      req.session.lastVisit = new Date();
      
  //////
- 
+   //respon to which page to render and assign var
      res.render('aboutMe',{
       title: 'AboutMe',
       

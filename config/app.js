@@ -1,4 +1,12 @@
-//sessions
+
+   /*
+   File name: app.js
+   Student’s Name: Pok Hei Yeung
+   StudentID: 301240885
+   Date: 28/09/2022
+   */
+
+//sessions declare
 var config=require('./env/development');
 var session=require('express-session');
 /////
@@ -23,7 +31,7 @@ if(process.env.NODE_ENV === 'development'){
 }else if (process.env.NODE_ENV === 'production'){
     app.use(compress());
 }
-/////
+//bodyparser
 app.use(bodyParser.urlencoded({
     extended:true
 }));
@@ -43,12 +51,6 @@ app.use(session({
 
 
 
-   /*
-   File name: app.js
-   Student’s Name: Pok Hei Yeung
-   StudentID: 301240885
-   Date: 28/09/2022
-   */
 
 //set ejs engine
 app.set('views', './app/views')
@@ -61,11 +63,11 @@ app.use(express.static('./public'))
 
 
 
-
+//to router
 require("../app/routes/index.server.routes.js")(app);
 
-//28/09/2022
-//add pages
+
+//add pages/ multiple router is not needed so commented out
 /*
 require("../app/routes/aboutMe.server.routes.js")(app);
 require("../app/routes/contactMe.server.routes.js")(app);
@@ -76,6 +78,6 @@ require("../app/routes/project.server.routes.js")(app);
 
 return app;
 };
-//exporting the express 
+
 
 ///////////////////////////////////////////////////////////////////////////////
