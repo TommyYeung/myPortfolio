@@ -11,7 +11,9 @@ process.env.NODE_ENV = process.env.NODE_ENV || 'development';
 var express = require('./config/app'); //call express > route > contorl > 
 var app = express();
 var HOST = 'localhost';
-var port = 3000 || process.env.PORT; //"process.env.PORT" add for Heroku
+//var port = 3000 || process.env.PORT; //"process.env.PORT" add for Heroku
+var port = process.env.PORT || 3000; //"process.env.PORT" add for Heroku
+
 
 //set port and run
 app.listen(port);
