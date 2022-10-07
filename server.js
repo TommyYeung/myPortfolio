@@ -8,7 +8,7 @@
 process.env.NODE_ENV = process.env.NODE_ENV || 'development';
 
 //declare
-var express = require('./config/app'); //call express > route > contorl > 
+var express = require('./config/app'); //call app > route > contorl > 
 var app = express();
 var HOST = 'localhost';
 //var port = 3000 || process.env.PORT; <-- it wont work!!!!! waste of my time to be bug
