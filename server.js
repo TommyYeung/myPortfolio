@@ -14,7 +14,7 @@ var HOST = 'localhost';
 var PORT = 3000 || process.env.PORT; //"process.env.PORT" add for Heroku
 
 //set port and run
-app.listen(3000);
+app.listen(PORT);
 module.exports = app;
 console.log('Server running at http://localhost:3000/');
 
